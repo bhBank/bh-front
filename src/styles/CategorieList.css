@@ -1,0 +1,160 @@
+/* Ajoutez ces styles à votre fichier CSS existant */
+
+/* Layout principal */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar fixe */
+.app-sidebar {
+  width: 250px;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.sidebar-header {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logo {
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 1rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-icon {
+  margin-right: 0.8rem;
+  font-size: 1rem;
+}
+
+.nav-arrow {
+  margin-left: auto;
+  font-size: 0.8rem;
+}
+
+/* Dropdown des agences */
+.agencies-dropdown {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 0.3rem 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.agency-item {
+  padding: 0.7rem 1rem 0.7rem 2.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.agency-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Bouton de déconnexion */
+.logout-item {
+  margin-top: auto;
+  color: #ff6b6b;
+}
+
+/* Contenu principal */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 0;
+}
+
+/* Styles existants pour le tableau */
+.table-responsive {
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
+
+/* --- NOUVEAU STYLE POUR LA PARTIE AJOUT DE CATÉGORIE --- */
+
+.ajout-categorie-form {
+  background-color: white;
+  padding: 20px;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.ajout-categorie-form h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.ajout-categorie-form input,
+.ajout-categorie-form select,
+.ajout-categorie-form button {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ajout-categorie-form button {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ajout-categorie-form button:hover {
+  background-color: #16337a;
+}

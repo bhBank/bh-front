@@ -1,0 +1,349 @@
+/* Reset minimal */
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  height: 100%;
+}
+
+/* Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem 3rem;
+  background-color: #fff;
+  box-shadow: inset 2px 0 8px rgb(0 0 0 / 0.05);
+  overflow-y: auto;
+}
+
+/* Container */
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #2980b9, #6dd5fa);
+  margin-top: 8px;
+  border-radius: 3px;
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 60px;
+    opacity: 1;
+  }
+}
+
+/* Filter Section */
+.filter-section {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-section label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #34495e;
+  min-width: 120px;
+}
+
+.filter-section select {
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  border: 2px solid #130353;
+  border-radius: 6px;
+  background-color: #e8f0fe;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.filter-section select:hover,
+.filter-section select:focus {
+  border-color: #1c5980;
+  box-shadow: 0 0 8px #f8f8f8aa;
+  transition: all 0.3s ease;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+  margin-bottom: 2rem;
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgb(0 0 0 / 0.15);
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+/* Form Inputs */
+.form-control {
+  border-radius: 8px;
+  border: 1.8px solid #ccc;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  color: #2c3e50;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 200px;
+}
+
+.form-control:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 8px #2980b9aa;
+}
+
+.me-2 {
+  margin-right: 0.75rem;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Ville select specifically */
+.ville-select {
+  min-width: 220px;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-success {
+  background-color: #130353;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #130353;
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.5);
+}
+
+.btn-primary {
+  background-color: #130353;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #130353;
+  box-shadow: 0 5px 15px rgba(41, 128, 185, 0.5);
+}
+
+.btn-secondary {
+  background-color: #130353;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #130353;
+  box-shadow: 0 5px 15px rgba(127, 140, 141, 0.5);
+}
+
+/* Bouton Modifier - même style que Supprimer */
+.btn-warning {
+  background-color: #8a101f;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #8a101f;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.5);
+}
+
+.btn-danger {
+  background-color: #8a101f;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #8a101f;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.5);
+}
+
+/* Table styling */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-size: 1rem;
+}
+
+.table thead tr {
+  background-color: #130353;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.table thead th {
+  padding: 12px 20px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.table tbody tr {
+  background-color: #5a1111;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.table tbody tr:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.table tbody td {
+  padding: 14px 20px;
+  vertical-align: middle;
+}
+
+/* Actions buttons in table */
+.table tbody td button {
+  margin-right: 6px;
+  min-width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: transform 0.15s ease;
+}
+
+.table tbody td button:hover {
+  transform: scale(1.15);
+}
+
+/* Style spécifique pour les boutons Modifier dans le tableau */
+.table tbody td .btn-warning {
+  background-color: #8a101f;
+  color: white;
+}
+
+.table tbody td .btn-warning:hover {
+  background-color: 8a101f;
+}
+
+/* Text center for empty states */
+.text-center {
+  text-align: center;
+  color: #95a5a6;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+/* Form control small for editing inputs */
+.form-control-sm {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.875rem;
+  border-radius: 6px;
+}
+
+/* Optgroup styling for select */
+select optgroup {
+  font-weight: 700;
+  color: #02101f;
+  background-color: #ecf0f1;
+}
+
+/* Scrollbar styling for main-content */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background-color: #2980b9;
+  border-radius: 10px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: #d6e9f8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .d-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-control, .ville-select {
+    min-width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

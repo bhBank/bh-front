@@ -1,0 +1,116 @@
+/* Animation générale à l'entrée */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CONTAINER PRINCIPAL */
+.chefs-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+/* FORMULAIRE CHEF - GRID RESPONSIVE */
+.form-chef {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* CHAMPS DE SAISIE */
+.form-chef input,
+.form-chef select {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.form-chef input:focus,
+.form-chef select:focus {
+  border-color: #130353;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+/* BOUTON AJOUT */
+.form-chef button {
+  padding: 12px;
+  background-color: #130353;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.form-chef button:hover {
+  background-color: #130353;
+  transform: scale(1.02);
+}
+
+/* LISTE DES CHEFS */
+.liste-chefs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ÉLÉMENT INDIVIDUEL */
+.liste-chefs li {
+  background: #f3f4f6;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.4s ease;
+}
+
+.liste-chefs li:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+/* BOUTON SUPPRIMER */
+.btn-supprimer {
+  background: none;
+  border: none;
+  color: #130353;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-supprimer:hover {
+  color: #130353;
+  transform: scale(1.2);
+}
+
+
+
+
+
+

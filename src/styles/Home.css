@@ -1,0 +1,116 @@
+/* Layout principal */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.app-sidebar {
+  width: 250px;
+  background-color: #081a4c !important;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+/* Contenu principal */
+.main-content {
+  margin-left: 250px;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* === BANNIÈRE IMAGE === */
+.header-banner {
+  background-image: url('../assets/acceuill.jpg'); /* Ton image d’accueil */
+  height: 80vh; /* La moitié de la hauteur de la fenêtre */
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.header-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #1e3a8a(169, 40, 40, 0.3); /* filtre assombri */
+}
+
+/* === WELCOME CARD === */
+.welcome-card {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 90%;
+  width: 1000px;
+  text-align: center;
+  animation: fadeSlideIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.welcome-card h1 {
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.welcome-card p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Animation */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .welcome-card {
+    padding: 2rem;
+    width: 95%;
+  }
+
+  .welcome-card h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-card p {
+    font-size: 1rem;
+  }
+}
+
+
+.header-title {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  margin: 0;
+}
